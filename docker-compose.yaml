@@ -1,0 +1,52 @@
+
+services:
+  # Serviço do banco de dados PostgreSQL
+  postgres-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_USER: "postgres"
+      POSTGRES_DB: "Conversio_db"
+    ports:
+      - "5434:5432"
+    volumes:
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./postgres-data:/var/lib/postgresql/data
+    networks:
+      - postgres-compose-network
+
+  # Serviço do backend Spring Boot
+  backend:
+    build:
+      context: ./backend  # Caminho para o diretório do backend
+      dockerfile: Dockerfile  # Especifica explicitamente o Dockerfile
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres-db:5432/Conversio_db
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres-db
+    networks:
+      - postgres-compose-network
+    restart: always
+
+  # Serviço do frontend React com Vite
+  frontend:
+    build:
+      context: ./frontend  # Caminho para o diretório do frontend
+      dockerfile: Dockerfile  # Especifica explicitamente o Dockerfile
+    ports:
+      - "5173:5173"  # Porta onde o Vite estará rodando
+    networks:
+      - postgres-compose-network
+    environment:
+      - VITE_API_URL=http://backend:8080  # URL do backend
+    depends_on:
+      - backend
+    restart: always
+
+networks:
+  postgres-compose-network:
+    driver: bridge

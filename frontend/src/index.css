@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+
+}
+
+
+body{
+    font-family: "Montserrat", serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilizando a barra de rolagem */
+::-webkit-scrollbar {
+    width: 15px; /* largura da barra de rolagem */
+    border-radius: 12px;
+}
+
+/* Estilizando o traço da barra de rolagem */
+::-webkit-scrollbar-track {
+    cursor: pointer;
+    background: rgb(255, 255, 255); /* cor de fundo da barra de rolagem */
+}
+
+/* Estilizando o "polegar" da barra de rolagem */
+::-webkit-scrollbar-thumb {
+    cursor: pointer;
+    background-image: linear-gradient(to bottom, rgb(64, 119, 129), rgb(65, 65, 65)); /* cor do polegar da barra de rolagem */
+    border-radius: 15px;
+}

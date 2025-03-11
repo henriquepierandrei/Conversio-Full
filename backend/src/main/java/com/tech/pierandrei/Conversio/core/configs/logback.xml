@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <!-- Set the log format default -->
+    <conversionRule conversionWord="clr" converterClass="org.springframework.boot.logging.logback.ColorConverter" />
+
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%clr(%d{dd/MM/yyyy HH:mm:ss.SSS}){faint} %clr([%-5level]){yellow} %clr(${PID}){magenta} %clr([%-50.50logger]){cyan} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Set the logger root to your level -->
+    <root level="INFO">
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Package-specific logging configuration -->
+    <logger name="tech.pierandrei" level="DEBUG" />
+</configuration>

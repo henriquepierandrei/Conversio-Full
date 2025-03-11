@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body style="margin: 0; padding: 0;">
+<table width="100%" cellspacing="0" cellpadding="0" border="0">
+    <tr>
+        <td align="center">
+            <table width="600" cellspacing="0" cellpadding="0" border="0" style="background-color: #ffffff;border: 1px solid #d4d4d4;">
+                <!-- Header -->
+                <tr bgcolor="#ffd30d">
+                    <td align="center" style="color: #ffd30d; font-family: Arial, sans-serif;">
+                        <img src="https://img.icons8.com/?size=100&id=8122&format=png&color=111010" width="60"
+                             height="60" alt="Gift">
+                        <h2 style="margin: 10px 0;color: #1f1b1b;"><strong style="font-weight: 900;color: #111010;">Alerta</strong>, leia este email atentamente!</h2>
+                    </td>
+                </tr>
+                <!-- Content -->
+                <tr>
+                    <td style="padding: 20px; font-family: Arial, sans-serif; color: #333;">
+                        <p style="font-size: 1.2em;">Olá <strong style="font-weight: 900;color: #111010;">{name}</strong>, Leia esse email com atenção!</p>
+                        <hr style="background-color: #ffd30d; height: 6px;border: none;border-radius: 15px;">
+                        <br>
+                        <p style="color: rgb(83, 81, 81);padding: 5px;">{p-01}</p>
+                        <hr style="width: 300px;background-color: rgb(218, 218, 218);border: none;height: 2px;">
+                        <p style="color: rgb(83, 81, 81);padding: 5px;">{p-02}</p>
+
+
+                        <img src="{link-banner}" alt="" style="width: 100%; border-radius: 10px; margin: 10px 0;">
+                        <br>
+                        <hr>
+                        <p>Se você tiver dúvidas sobre nossos serviços, visite nossa <a href="{link-help-center}"
+                                                                                        style="color: #b9e90d; text-decoration: none;">Central de Ajuda</a>.</p>
+                        <p>Obrigado,<br><strong style="font-weight: 900;color: #111010;">{company-name}</strong></p>
+                    </td>
+                </tr>
+                <!-- Button -->
+                <tr>
+                    <td align="center" style="padding: 20px;">
+                        <a href="{link-button}"
+                           style="background-color: #ffd30d; color: #202020; padding: 15px 30px; text-decoration: none; font-size: 16px;font-weight: 600 ;font-family: Arial, sans-serif;{visibility-button}; border-radius: 5px;">
+                            Ver Agora!</a>
+                    </td>
+                </tr>
+                {footer-component}
+            </table>
+        </td>
+    </tr>
+</table>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+/* Themes.css */
+.themes-container {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f5f7;
+    position: relative;
+    padding: 80px 20px 40px;
+  }
+  
+  .themes-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .themes-content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .themes-title {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .templates-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+  }
+  
+  .template-card {
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .template-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .template-card.selected {
+    box-shadow: 0 0 0 3px currentColor, 0 12px 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .template-header {
+    padding: 16px;
+    color: white;
+    text-align: center;
+    position: relative;
+  }
+  
+  .template-header h3 {
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  .selected-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: white;
+    color: inherit;
+    font-size: 12px;
+    padding: 3px 8px;
+    border-radius: 12px;
+    font-weight: 600;
+  }
+  
+  .template-image-container {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+  }
+  
+  .template-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: contain;
+    border-radius: 6px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .template-card:hover .template-image {
+    transform: scale(1.03);
+  }
+  
+  .template-description {
+    padding: 20px;
+    flex-grow: 1;
+  }
+  
+  .template-description p {
+    margin: 0;
+    color: #555;
+    line-height: 1.5;
+  }
+  
+  .template-description strong {
+    color: #333;
+    font-weight: 600;
+  }
+  
+  .template-button {
+    margin: 0 20px 20px;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .template-button:hover {
+    filter: brightness(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .themes-container {
+      padding-top: 100px;
+    }
+    
+    .templates-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .template-card {
+      max-width: 450px;
+      margin: 0 auto;
+    }
+  }

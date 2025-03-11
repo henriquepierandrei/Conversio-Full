@@ -1,0 +1,314 @@
+/* Main Container */
+.container-send-email-principal {
+    background-color: #f5f7fa;
+    min-height: 100vh;
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* Card Container */
+  .container-send-email {
+    background-color: white;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+    padding: 25px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+    display: flex;
+    transition: all 0.3s ease;
+  }
+  
+  /* Form Section */
+  .form-send-email {
+    padding: 20px;
+    border: 1px solid #eaedf2;
+    border-radius: 8px;
+    width: 50%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  /* Template Preview Section */
+  .template-send-email {
+    padding: 20px;
+    border: 1px solid #eaedf2;
+    border-radius: 8px;
+    width: 50%;
+    background-color: #fff;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  
+  .template-send-email.fade-in {
+    animation: fadeInAnimation 0.5s ease-in-out forwards;
+  }
+  
+  @keyframes fadeInAnimation {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Heading */
+  .h1-send-email {
+    color: #4361ee;
+    font-weight: 700;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 20px;
+    font-size: 28px;
+    position: relative;
+  }
+  
+  .h1-send-email:after {
+    content: "";
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #4361ee;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Form elements */
+  .input-group {
+    margin-bottom: 15px;
+  }
+  
+  .input-group-text {
+    background-color: #4361ee;
+    color: white;
+    min-width: 130px;
+    justify-content: center;
+    border: none;
+  }
+  
+  .form-control {
+    border: 1px solid #e0e5ec;
+    padding: 10px 12px;
+    height: auto;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-control:focus {
+    border-color: #4361ee;
+    box-shadow: 0 0 0 0.2rem rgba(67, 97, 238, 0.15);
+  }
+  
+  .form-select {
+    border: 1px solid #e0e5ec;
+    padding: 10px 12px;
+    height: auto;
+    cursor: pointer;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .form-select:focus {
+    border-color: #4361ee;
+    box-shadow: 0 0 0 0.2rem rgba(67, 97, 238, 0.15);
+  }
+  
+  /* Switch */
+  .form-check-input {
+    cursor: pointer;
+    width: 3em;
+    height: 1.5em;
+  }
+  
+  .form-check-input:checked {
+    background-color: #4361ee;
+    border-color: #4361ee;
+  }
+  
+  .form-check-label {
+    cursor: pointer;
+    padding-left: 8px;
+    font-weight: 500;
+  }
+  
+  /* Buttons */
+  .btn-primary, .btn-add-client {
+    background-color: #4361ee;
+    border: none;
+    padding: 12px 20px;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+  }
+  
+  .btn-primary:hover, .btn-add-client:hover {
+    background-color: #3a56d4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(67, 97, 238, 0.2);
+  }
+  
+  /* File upload */
+  .custum-file-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    border: 2px dashed #4361ee;
+    background-color: #f8fafc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 15px;
+  }
+  
+  .custum-file-upload:hover {
+    background-color: #eef2ff;
+    border-color: #3a56d4;
+  }
+  
+  .custum-file-upload input {
+    display: none;
+  }
+  
+  .custum-file-upload .text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .custum-file-upload .text span {
+    font-weight: 500;
+    color: #4361ee;
+    margin-top: 10px;
+  }
+  
+  /* Alerts */
+  .alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.3s ease forwards;
+    z-index: 9999;
+    max-width: 350px;
+  }
+  
+  .alert-danger {
+    background-color: #fee2e2;
+    color: #dc2626;
+  }
+  
+  .alert-success {
+    background-color: #dcfce7;
+    color: #16a34a;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .container-send-email {
+      width: 95%;
+      flex-direction: column;
+      padding: 15px;
+    }
+    
+    .form-send-email, .template-send-email {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .container-send-email-principal {
+      padding: 10px;
+    }
+    
+    .input-group-text {
+      min-width: 110px;
+      font-size: 14px;
+    }
+    
+    .h1-send-email {
+      font-size: 22px;
+    }
+  }
+  
+  /* Template preview styles */
+  .email-template-preview {
+    border: 1px solid #e0e5ec;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 380px;
+    margin: 0 auto;
+    transition: all 0.3s ease;
+  }
+  
+  .email-template-preview:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+  }
+  
+  .preview-header {
+    text-align: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid #e0e5ec;
+    background-color: #f8fafc;
+  }
+  
+  .preview-header h4 {
+    margin: 0;
+    font-size: 18px;
+    color: #4361ee;
+  }
+  
+  .template-type-badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    margin-top: 8px;
+  }
+  
+  .badge-alert {
+    background-color: #fff8e1;
+    color: #ffa000;
+  }
+  
+  .badge-promotion {
+    background-color: #e8f5e9;
+    color: #43a047;
+  }
+  
+  .badge-charge {
+    background-color: #e3f2fd;
+    color: #1976d2;
+  }
+  
+  /* Loading spinner */
+  .spinner-grow {
+    width: 20px;
+    height: 20px;
+  }
